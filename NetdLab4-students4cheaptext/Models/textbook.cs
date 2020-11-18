@@ -40,17 +40,17 @@ namespace NetdLab4_students4cheaptext.Models
             //for like new condition
             if (textCondition == "likeNew")
             {
-                return textPrice/2;
+                return Math.Round(textPrice/2, 2);
             }
             //for good condition
             else if (textCondition == "good") 
             {
-                return textPrice/3;
+                return Math.Round(textPrice/3, 2);
             }
             //for bad condition
             else 
             {
-                return textPrice/4;
+                return Math.Round(textPrice/4, 2);
             }
         }
 
