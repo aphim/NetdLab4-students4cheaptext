@@ -1,0 +1,55 @@
+﻿<!--
+    Program: NetdLab 4
+    Name: Jacky Yuan
+    Date: Nov. 17, 2020
+    -->
+
+
+@{
+    ViewData["Title"] = "Appraise";
+}
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Appraise</title>
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+</head>
+<body>
+    <!-- Title -->
+    <h1 style="text-align:center">Students4CheapTexts <img src="~/images/book.jpg" /></h1>
+
+    <!-- Nav bar -->
+    <ul>
+        <li><a href="~/Home/Index">Home</a></li>
+        <li><a class="active" href="~/Home/Appraise">Appraise</a></li>
+
+    </ul>
+
+    <!-- content -->
+    <form class="form-signin" method="post" style="text-align:center">
+        <label for="textTitle" class="sr-only">Textbook Title:</label>
+        <input type="text" name="textTitle" id="textTitle" class="form-control" placeholder="Title">
+        <br />
+        <label for="textISBN" class="sr-only">Textbook ISBN:</label>
+        <input type="text" name="textISBN" id="textISBN" class="form-control" placeholder="ISBN">
+        <br />
+        <label for="textVersion" class="sr-only">Textbook Version:</label>
+        <input type="text" name="textVersion" id="textVersion" class="form-control" placeholder="Version">
+        <br />
+        <label for="textPrice" class="sr-only">Original Purchase Price:</label>
+        <input type="text" name="textPrice" id="textPrice" class="form-control" placeholder="Price">
+        <br />
+        <label for="textCondition" class="sr-only">Condition:</label>
+        <select name="textCondition">
+            <option value="likeNew">Like New</option>
+            <option value="good">Good</option>
+            <option value="bad">Bad</option>
+        </select>
+        <br />
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Appraise</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿<!-- 
+    Program: NetdLab 4
+    Name: Jacky Yuan
+    Date: Nov. 17, 2020
+    -->
+
+
+@{
+    ViewData["Title"] = "Appraised";
+}
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>YourAppraisal</title>
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+</head>
+<body>
+
+    <!-- Title -->
+    <h1 style="text-align:center">Students4CheapTexts <img src="~/images/book.jpg" /></h1>
+
+    <!-- Nav bar -->
+    <ul>
+        <li><a href="~/Home/Index">Home</a></li>
+        <li><a class="active" href="~/Home/Appraise">Appraise</a></li>
+
+    </ul>
+
+    <!-- Content -->
+    <h3 style="text-align:center"> @ViewData["titleText"]</h3>
+
+    <h3 style="text-align:center"> @ViewData["valueText"]</h3>
+</body>
+</html>
