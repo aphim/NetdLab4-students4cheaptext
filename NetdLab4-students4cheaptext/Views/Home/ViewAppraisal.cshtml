@@ -1,0 +1,44 @@
+﻿<!--
+    Program: NetdLab4_students4cheaptext
+    Name: Jacky Yuan
+    Date: Nov. 24, 2020
+    -->
+
+@model IEnumerable<NetdLab4_students4cheaptext.Models.textbook>
+
+@{
+    ViewBag.Title = "Books";
+}
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Appraise</title>
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+</head>
+<body>
+    <!-- Title -->
+    <h1 style="text-align:center">Students4CheapTexts <img src="~/images/book.jpg" width="70" height="70" /></h1>
+
+    <!-- Nav bar -->
+    <ul>
+        <li><a href="~/Home/Index">Home</a></li>
+        <li><a href="~/Home/Appraise">Appraise</a></li>
+        <li><a class="active" href="~/Home/ViewAppraisal">View Appraisals</a></li>
+    </ul>
+
+    <!-- Content -->
+    <!-- loops through the textbooklist and outputs each entry -->
+    @foreach (var item in Model)
+    {
+        <div style="text-align:center">
+            <h3>Your textbook: @item.textTitle version: </h3>
+            <h3> @item.textVersion was appraised at: $ @item.calcValue(@item.textPrice, item.textCondition)</h3>
+            <hr />
+        </div>
+    }
+</body>
+</html>
+

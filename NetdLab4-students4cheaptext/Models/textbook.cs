@@ -1,4 +1,9 @@
-﻿using System;
+﻿// Program: NetdLab4_students4cheaptext
+// Name: Jacky Yuan
+// Date: Nov 17,2020
+// Change log: N/A
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -25,7 +30,7 @@ namespace NetdLab4_students4cheaptext.Models
         }
 
         //parameterized constructor
-        public textbook(string textTitle, int textISBN, double textVersion, double textPrice, string textCondition)
+        public textbook(string textTitle, Int64 textISBN, double textVersion, double textPrice, string textCondition)
         {
             this.textTitle = textTitle;
             this.textISBN = textISBN;
@@ -53,6 +58,12 @@ namespace NetdLab4_students4cheaptext.Models
                 return Math.Round(textPrice/4, 2);
             }
         }
+
+        public override string ToString()
+        {
+            return "Your textbook: "+ textTitle+", Version:" +textVersion+" was appraised at: $" + calcValue(textPrice, textCondition);
+        }
+
 
     }
 
